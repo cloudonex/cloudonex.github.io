@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>PayUmoney plugin for iBilling</title>
+
+    <!-- Styles -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+
+    <link rel="icon" href="assets/img/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+
+<header class="site-header sticky navbar-transparent">
+
+    <!-- Top navbar & branding -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+
+            <!-- Toggle buttons and brand -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                </button>
+
+                <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="index.html"><img src="assets/img/payumoney_logo.png"> </a>
+            </div>
+            <!-- END Toggle buttons and brand -->
+
+            <!-- Top navbar -->
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">Documentation</a></li>
+                    <li class="hero"><a href="https://codecanyon.net/item/ibilling-crm-accounting-and-billing-software/11021678">Purchase</a></li>
+                </ul>
+            </div>
+            <!-- END Top navbar -->
+
+        </div>
+    </nav>
+    <!-- END Top navbar & branding -->
+
+    <!-- Banner -->
+    <div class="banner auto-size" style="background-color: #85b213">
+        <div class="container text-white">
+            <h1><strong>PayUmoney</strong> plugin for iBilling</h1>
+            <h5>Use PayUmoney payment gateway to accept payment using your iBilling.</h5>
+        </div>
+    </div>
+    <!-- END Banner -->
+
+</header>
+
+
+
+<main class="container">
+    <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-sm-3 sidebar">
+
+            <ul class="nav sidenav dropable sticky">
+                <li><a href="#get-started">What is a Hook?</a></li>
+                <li><a href="#get-started">Creating a Hook</a></li>
+                <li>
+                    <a href="#installing">Real Life Example</a>
+                    <ul>
+                        <li><a href="#drag_n_drop">Change Language String</a></li>
+                        <li><a href="#manual_installation">Send SMS Notification when Invoice Paid</a></li>
+                        <li><a href="#manual_installation">Send Additional Email when Customer Created</a></li>
+                        <li><a href="#manual_installation">Creating Custom Menu</a></li>
+                        <li><a href="#manual_installation">Registering users in another system when they signup</a></li>
+                        <li><a href="#manual_installation">Modify Default Features</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#get-started">Hook Points</a></li>
+
+
+
+                <li>
+                    <a href="#accessing">Accessing PayUmoney</a>
+                    <ul>
+                        <li><a href="#configuration">Configuration</a></li>
+                        <li><a href="#repositioning">Repositioning</a></li>
+                        <li><a href="#sandbox">Testing Payment Gateway</a></li>
+                    </ul>
+                </li>
+                <li><a href="#troubleshooting">Common Troubleshooting Tips</a></li>
+                <li><a href="#disabling">Disabling Plugin</a></li>
+                <li><a href="#uninstalling">Uninstalling Plugin</a></li>
+                <li><a href="#support">Getting Support</a></li>
+            </ul>
+
+        </aside>
+        <!-- END Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-sm-9 main-content" role="main">
+
+            <p class="lead">This is a Plugin for iBilling. You must have already installed iBilling to use PayUmoney payment gateway Plugin. Please use the latest version of iBilling to use this plugin. You can download latest version by visiting codecanyon, My Account -> Downloads.
+
+            </p>
+
+            <section>
+                <h2 id="get-started">Get started with PayUmoney Plugin</h2>
+                <p>You will find following files by unzipping downloaded files.</p>
+
+
+                <div class="file-tree">
+
+                    <ul>
+                        <li class="is-folder open">
+                            payuin
+                            <ul>
+                                <li class="is-folder">
+                                    Documentation
+                                    <ul>
+                                        <li class="is-file">...</li>
+                                    </ul>
+                                </li>
+                                <li class="is-folder">
+                                    views
+                                    <ul>
+                                        <li class="is-folder">
+                                            imgs
+                                            <ul>
+                                                <li class="is-file">payuin_pg_logo.png</li>
+                                            </ul>
+                                        </li>
+                                        <li class="is-file">index.html</li>
+                                    </ul>
+                                </li>
+
+                                <li class="is-file">ibml.plugin.php</li>
+                                <li class="is-file">install.php</li>
+                                <li class="is-file">manifest.php</li>
+                                <li class="is-file">payments.php</li>
+                                <li class="is-file">uinistall.php</li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <section>
+                <h2 id="installing">Installing</h2>
+
+                <h3 id="drag_n_drop">Drag &amp; Drop Installation</h3>
+                <ul class="step-text">
+                    <li>
+                        <h5>Go to Settings -> Plugins</h5>
+                        <p>Login to your iBilling. Then go to Plugins under Settings menu.</p>
+                        <img src="assets/img/settings_plugins.png">
+                    </li>
+
+                    <li>
+                        <h5>Upload Downloaded zip file</h5>
+                        <p>Uploaded your downloaded zip file using drag and drop or click to upload. The system will automatically upload and extract the plugin.</p>
+                    </li>
+
+                    <li>
+                        <h5>Install</h5>
+                        <p>You will find newly uploaded plugin in the plugin list. Simply click the Install button. The plugin will be installed and activated.</p>
+                    </li>
+
+                </ul>
+
+                <h3 id="manual_installation">Manual Installation</h3>
+                <ul class="step-text">
+                    <li>
+                        <h5>Go to Settings -> Plugins</h5>
+                        <p>Login to your iBilling. Then go to Plugins under Settings menu.</p>
+                    </li>
+
+                    <li>
+                        <h5>Extract Plugin Zip file</h5>
+                        <p>Extract the downloaded file using any unzipping software. You will find a directory named "payuin".</p>
+                    </li>
+
+                    <li>
+                        <h5>Upload Plugin files in the plugin directory</h5>
+                        <p>Upload the payuin folder in sysfrm/plugins/ directory using ftp or any other programme.</p>
+                    </li>
+
+                    <li>
+                        <h5>Install</h5>
+                        <p>You will find newly uploaded plugin in the plugin list. Simply click the Install button. The plugin will be installed and activated.</p>
+                    </li>
+
+                </ul>
+
+
+
+            </section>
+
+
+            <section>
+                <h2 id="accessing">Access PayUmoney Payment Gateway</h2>
+                <p>After installing PayUmoney, you can manage this payment gateway from Settings -> Payment Gateways.</p>
+
+
+                <h3 id="configuration">Configuration</h3>
+                <p>Go to Settings -> Payment Gateways, in this page you will find list of available payment gateways including PayUmoney. Click Edit. </p>
+
+                <img class="img-responsive img-rounded" src="assets/img/pg_list.png">
+                <p>After clicking Edit, you will find Configuration page-</p>
+                <img class="img-responsive img-rounded" src="assets/img/config.png">
+                <br>
+
+                <table class="table table-bordered table-striped table-info">
+                    <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td>Name of the Payment Gateway.</td>
+                    </tr>
+                    <tr>
+                        <td>Merchant Key:</td>
+                        <td>Merchant key is provided by the Payment gateway.</td>
+                    </tr>
+                    <tr>
+                        <td>Status:</td>
+                        <td>To enable / disable this payment gateway.</td>
+                    </tr>
+                    <tr>
+                        <td>Merchant Salt:</td>
+                        <td>Merchant Salt is provided by the payment gateway. Enter this here.</td>
+                    </tr>
+                    <tr>
+                        <td>Mode:</td>
+                        <td>Live or Sandbox. Default is Live. For testing, use sandbox.</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+
+                <h3 id="repositioning">Repositioning</h3>
+                <p>To reorder Payment gateways, Go to Settings -> Payment Gateways. You will find a button named "Reorder Payment Gateway Postion." You can reorder posting by drage and drop.</p>
+
+
+                <h3 id="sandbox">Testing Payment Gateway</h3>
+                <p>Before going Live, you can test by making test transaction. To enable sandbox mode, Go To Settings -> Payment Gateways. Find PayUmoney and click Edit. On next page, you will find to set mode, Live or Sandbox.</p>
+
+
+                <h3 id="troubleshooting">Common Troubleshooting Tips</h3>
+                <p>Please make sure the plugins directory exist in the sysfrm/plugins/ folder & You are using latest version of iBilling. Also check all the files has been uploaded in the directory.</p>
+
+            </section>
+
+            <section>
+                <h2 id="disabling">Disabling Plugin</h2>
+                <p>To disable this Plugin- Go to Settings -> Plugins. You will find this plugin listed on this page. Just click Deactivate to disable this plugin</p>
+
+            </section>
+
+            <section>
+                <h2 id="uninstalling">Uninstalling Plugin</h2>
+                <p>After deactivating the plugin, you will be able to uninstall the plugin. To do this, simply click Uninstall button on Plugins page. Please note that, all configuration will be removed when uninstalled.</p>
+
+            </section>
+
+            <section>
+                <h2 id="support">Getting Support</h2>
+                <p>For any support, contact me using my profile page - <a href="https://codecanyon.net/user/sadiasharmin" target="_blank">https://codecanyon.net/user/sadiasharmin</a> </p>
+
+            </section>
+
+        </article>
+        <!-- END Main content -->
+    </div>
+</main>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <p>Copyright &copy; 2016 <a href="http://www.cloudonex.com" target="_blank">CloudOnex</a> . All rights reserved.</p>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <ul class="footer-menu">
+                    <li><a href="https://codecanyon.net/item/ibilling-crm-accounting-and-billing-software/11021678" target="_blank">View iBilling on CodeCanyon</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END Footer -->
+
+<!-- Scripts -->
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
