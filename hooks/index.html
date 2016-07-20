@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <title>PayUmoney plugin for iBilling</title>
+    <title>iBilling Hooks</title>
 
     <!-- Styles -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="index.html"><img src="assets/img/payumoney_logo.png"> </a>
+                <a class="navbar-brand" href="index.html">iBilling Hooks </a>
             </div>
             <!-- END Toggle buttons and brand -->
 
@@ -60,10 +60,10 @@
     <!-- END Top navbar & branding -->
 
     <!-- Banner -->
-    <div class="banner auto-size" style="background-color: #85b213">
+    <div class="banner auto-size" style="background-color: #0088cc">
         <div class="container text-white">
-            <h1><strong>PayUmoney</strong> plugin for iBilling</h1>
-            <h5>Use PayUmoney payment gateway to accept payment using your iBilling.</h5>
+            <h1><strong>iBilling</strong> customization</h1>
+            <h5>Add your own code to iBilling.</h5>
         </div>
     </div>
     <!-- END Banner -->
@@ -79,36 +79,23 @@
         <aside class="col-sm-3 sidebar">
 
             <ul class="nav sidenav dropable sticky">
-                <li><a href="#get-started">What is a Hook?</a></li>
-                <li><a href="#get-started">Creating a Hook</a></li>
+                <li><a href="#what_is_hook">What is a Hook?</a></li>
+                <li><a href="#get-started">Get Started</a></li>
                 <li>
-                    <a href="#installing">Real Life Example</a>
+                    <a href="#real_life_example">Real Life Example</a>
                     <ul>
-                        <li><a href="#drag_n_drop">Change Language String</a></li>
-                        <li><a href="#manual_installation">Send SMS Notification when Invoice Paid</a></li>
-                        <li><a href="#manual_installation">Send Additional Email when Customer Created</a></li>
-                        <li><a href="#manual_installation">Creating Custom Menu</a></li>
-                        <li><a href="#manual_installation">Registering users in another system when they signup</a></li>
-                        <li><a href="#manual_installation">Modify Default Features</a></li>
+                        <li><a href="#send_sms_notification">Sending SMS Notification</a></li>
+                        <li><a href="#send_additional_email">Sending Additional Email</a></li>
+                        <li><a href="#creating_custom_menu">Creating Custom Menu</a></li>
+                        <li><a href="#registering_users">Registering users in another system</a></li>
+                        <!--<li><a href="#modify_features">Modifying Default Features</a></li>-->
 
                     </ul>
                 </li>
-                <li><a href="#get-started">Hook Points</a></li>
-
-
-
-                <li>
-                    <a href="#accessing">Accessing PayUmoney</a>
-                    <ul>
-                        <li><a href="#configuration">Configuration</a></li>
-                        <li><a href="#repositioning">Repositioning</a></li>
-                        <li><a href="#sandbox">Testing Payment Gateway</a></li>
-                    </ul>
-                </li>
-                <li><a href="#troubleshooting">Common Troubleshooting Tips</a></li>
-                <li><a href="#disabling">Disabling Plugin</a></li>
-                <li><a href="#uninstalling">Uninstalling Plugin</a></li>
+                <!--<li><a href="#hookpoints">Hook Points</a></li>-->
                 <li><a href="#support">Getting Support</a></li>
+
+
             </ul>
 
         </aside>
@@ -118,45 +105,81 @@
         <!-- Main content -->
         <article class="col-sm-9 main-content" role="main">
 
-            <p class="lead">This is a Plugin for iBilling. You must have already installed iBilling to use PayUmoney payment gateway Plugin. Please use the latest version of iBilling to use this plugin. You can download latest version by visiting codecanyon, My Account -> Downloads.
+            <p class="lead">
+
+                iBilling Supports Hooks from V 4.2. You can add various features to your iBilling without editing the core files.
 
             </p>
 
+
             <section>
-                <h2 id="get-started">Get started with PayUmoney Plugin</h2>
-                <p>You will find following files by unzipping downloaded files.</p>
+                <h2 id="what_is_hook">What is hook?</h2>
+                <p>Action Hooks allow you to add your own code to iBilling. The code will run when specific events or actions occur inside the system. iBilling has over 100 different hook points. These you can tie custom code into.</p>
+
+
+
+
+            </section>
+
+            <section>
+                <h2 id="get-started">Get started with Hooks</h2>
+                <p>You will find hooks directory inside sysfrm. To know where the hooks directory located, click "sysfrm" directory below.</p>
 
 
                 <div class="file-tree">
 
                     <ul>
                         <li class="is-folder open">
-                            payuin
+                            iBilling
                             <ul>
                                 <li class="is-folder">
-                                    Documentation
+                                    sysfrm
                                     <ul>
-                                        <li class="is-file">...</li>
+                                        <li class="is-folder">autoload</li>
+                                        <li class="is-folder">controllers</li>
+                                        <li class="is-folder">dev</li>
+                                        <li class="is-folder open">hooks
+                                            <ul>
+                                                <li class="is-file">action.php</li>
+                                                <li class="is-file">index.html</li>
+                                            </ul>
+                                        </li>
+                                        <li class="is-folder">install</li>
+                                        <li class="is-folder">lan</li>
+                                        <li class="is-folder">lib</li>
+                                        <li class="is-folder">plugins</li>
+                                        <li class="is-folder">uploads</li>
+                                        <li class="is-folder">util</li>
+                                        <li class="is-file">boot.php</li>
+                                        <li class="is-file">config.php</li>
+                                        <li class="is-file">functions.php</li>
+                                        <li class="is-file">index.html</li>
+                                        <li class="is-file">orm.php</li>
+                                        <li class="is-file">plugged.php</li>
                                     </ul>
                                 </li>
                                 <li class="is-folder">
-                                    views
+                                    ui
                                     <ul>
                                         <li class="is-folder">
-                                            imgs
+                                            theme
                                             <ul>
-                                                <li class="is-file">payuin_pg_logo.png</li>
+                                                <li class="is-file">...</li>
                                             </ul>
                                         </li>
                                         <li class="is-file">index.html</li>
                                     </ul>
                                 </li>
 
-                                <li class="is-file">ibml.plugin.php</li>
-                                <li class="is-file">install.php</li>
-                                <li class="is-file">manifest.php</li>
-                                <li class="is-file">payments.php</li>
-                                <li class="is-file">uinistall.php</li>
+                                <li class="is-folder">
+                                    vendor
+                                    <ul>
+                                        <li class="is-file">...</li>
+                                    </ul>
+                                </li>
+
+                                <li class="is-file">index.php</li>
+
 
                             </ul>
                         </li>
@@ -165,125 +188,238 @@
 
                 </div>
 
-            </section>
+                <p>Create a file inside hooks directory with any name. (e.g.- action.php)</p>
+                <p>Now add the following codes inside action.php</p>
 
-
-            <section>
-                <h2 id="installing">Installing</h2>
-
-                <h3 id="drag_n_drop">Drag &amp; Drop Installation</h3>
-                <ul class="step-text">
-                    <li>
-                        <h5>Go to Settings -> Plugins</h5>
-                        <p>Login to your iBilling. Then go to Plugins under Settings menu.</p>
-                        <img src="assets/img/settings_plugins.png">
-                    </li>
-
-                    <li>
-                        <h5>Upload Downloaded zip file</h5>
-                        <p>Uploaded your downloaded zip file using drag and drop or click to upload. The system will automatically upload and extract the plugin.</p>
-                    </li>
-
-                    <li>
-                        <h5>Install</h5>
-                        <p>You will find newly uploaded plugin in the plugin list. Simply click the Install button. The plugin will be installed and activated.</p>
-                    </li>
-
-                </ul>
-
-                <h3 id="manual_installation">Manual Installation</h3>
-                <ul class="step-text">
-                    <li>
-                        <h5>Go to Settings -> Plugins</h5>
-                        <p>Login to your iBilling. Then go to Plugins under Settings menu.</p>
-                    </li>
-
-                    <li>
-                        <h5>Extract Plugin Zip file</h5>
-                        <p>Extract the downloaded file using any unzipping software. You will find a directory named "payuin".</p>
-                    </li>
-
-                    <li>
-                        <h5>Upload Plugin files in the plugin directory</h5>
-                        <p>Upload the payuin folder in sysfrm/plugins/ directory using ftp or any other programme.</p>
-                    </li>
-
-                    <li>
-                        <h5>Install</h5>
-                        <p>You will find newly uploaded plugin in the plugin list. Simply click the Install button. The plugin will be installed and activated.</p>
-                    </li>
-
-                </ul>
+                <div class="code-window">
 
 
 
-            </section>
 
 
-            <section>
-                <h2 id="accessing">Access PayUmoney Payment Gateway</h2>
-                <p>After installing PayUmoney, you can manage this payment gateway from Settings -> Payment Gateways.</p>
+
+<pre class="line-numbers"><code class="language-php">Event::bind('routing_started',function(){
+
+    global $_L;
+
+    $_L['CRM'] = 'Customers';
+    $_L['Add Contact'] = 'Add Customer';
+    $_L['List Contacts'] = 'List Customers';
 
 
-                <h3 id="configuration">Configuration</h3>
-                <p>Go to Settings -> Payment Gateways, in this page you will find list of available payment gateways including PayUmoney. Click Edit. </p>
+    });
+</code></pre>
 
-                <img class="img-responsive img-rounded" src="assets/img/pg_list.png">
-                <p>After clicking Edit, you will find Configuration page-</p>
-                <img class="img-responsive img-rounded" src="assets/img/config.png">
-                <br>
+                    <div class="code-preview">
+                        <p><img src="assets/img/hook_change_language_line.png"> </p>
+                    </div>
 
-                <table class="table table-bordered table-striped table-info">
-                    <tbody>
-                    <tr>
-                        <td>Name:</td>
-                        <td>Name of the Payment Gateway.</td>
-                    </tr>
-                    <tr>
-                        <td>Merchant Key:</td>
-                        <td>Merchant key is provided by the Payment gateway.</td>
-                    </tr>
-                    <tr>
-                        <td>Status:</td>
-                        <td>To enable / disable this payment gateway.</td>
-                    </tr>
-                    <tr>
-                        <td>Merchant Salt:</td>
-                        <td>Merchant Salt is provided by the payment gateway. Enter this here.</td>
-                    </tr>
-                    <tr>
-                        <td>Mode:</td>
-                        <td>Live or Sandbox. Default is Live. For testing, use sandbox.</td>
-                    </tr>
-
-                    </tbody>
-                </table>
+                </div>
 
 
-                <h3 id="repositioning">Repositioning</h3>
-                <p>To reorder Payment gateways, Go to Settings -> Payment Gateways. You will find a button named "Reorder Payment Gateway Postion." You can reorder posting by drage and drop.</p>
 
 
-                <h3 id="sandbox">Testing Payment Gateway</h3>
-                <p>Before going Live, you can test by making test transaction. To enable sandbox mode, Go To Settings -> Payment Gateways. Find PayUmoney and click Edit. On next page, you will find to set mode, Live or Sandbox.</p>
 
+<p>The possibilities with hooks are many, Here is some example when you might use hooks-</p>
 
-                <h3 id="troubleshooting">Common Troubleshooting Tips</h3>
-                <p>Please make sure the plugins directory exist in the sysfrm/plugins/ folder & You are using latest version of iBilling. Also check all the files has been uploaded in the directory.</p>
+<ul>
+    <li>Registering users in another system when they signup via iBilling.</li>
+    <li>Sending various notifications.</li>
+    <li>Keeping contacts in sync with third party applications.</li>
+    <li>Modifying features.</li>
+    <li>Making Custom action when invoice is paid.</li>
+</ul>
 
             </section>
 
             <section>
-                <h2 id="disabling">Disabling Plugin</h2>
-                <p>To disable this Plugin- Go to Settings -> Plugins. You will find this plugin listed on this page. Just click Deactivate to disable this plugin</p>
+                <h2 id="real_life_example">Real Life Example</h2>
+                <p>Here is the some usage example</p>
+
 
             </section>
 
             <section>
-                <h2 id="uninstalling">Uninstalling Plugin</h2>
-                <p>After deactivating the plugin, you will be able to uninstall the plugin. To do this, simply click Uninstall button on Plugins page. Please note that, all configuration will be removed when uninstalled.</p>
+                <h2 id="send_sms_notification">Sending SMS Notification</h2>
+
+                <p>Here is an example to send SMS notification to client when invoice marked as paid.</p>
+
+                <div class="code-window">
+
+
+
+
+
+
+<pre class="line-numbers"><code class="language-php">Event::bind('invoices/markpaid/',function($invoice){
+
+    $nexmo_api_key = ''; # Nexmo API Key
+    $nexmo_api_secret = ''; # Nexmo API Secret
+    $from = 'iBilling'; # Message from
+
+
+    // Find the client
+
+    $client = ORM::for_table('crm_accounts')->find_one($invoice->userid);
+
+    if($client->phone == ''){
+    return false;
+    }
+
+    $to = $client->phone;
+
+    $text = 'Hi '.$client->account.'! Thanks for your payment. Invoice- '.$invoice->id.' Paid Successfully.';
+
+
+    $url = 'https://rest.nexmo.com/sms/json?' . http_build_query(
+    [
+    'api_key' =>  $nexmo_api_key,
+    'api_secret' => $nexmo_api_secret,
+    'to' => $to,
+    'from' => $from,
+    'text' => $text
+    ]
+    );
+
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+
+    return $response;
+
+    });
+</code></pre>
+
+                    <div class="code-preview">
+                        <p><img src="assets/img/sms_notification.jpg"> </p>
+                    </div>
+
+                </div>
+
 
             </section>
+
+
+            <section>
+                <h2 id="send_additional_email">Sending Additional Email</h2>
+
+                <p>Send a notification to admin that a new client has been registered.</p>
+
+                <div class="code-window">
+
+
+
+
+
+
+<pre class="line-numbers"><code class="language-php">Event::bind('client_registered',function($data){
+
+
+    $message = 'New Client Registered. Client: '.$data['account'].' Email: '.$data['email'];
+
+    Ib_Email::sendEmail('admin@example.com','Client Signup',$message);
+
+
+    });
+</code></pre>
+
+
+
+                </div>
+
+
+            </section>
+
+
+            <section>
+                <h2 id="creating_custom_menu">Creating Custom Menu</h2>
+
+                <p>Dynamically create menu inside iBilling.</p>
+
+                <div class="code-window">
+
+
+
+
+
+
+<pre class="line-numbers"><code class="language-php">add_menu_admin('About','#','about','fa fa-paper-plane',2,array(
+    array(
+    'name' => 'Documentation',
+    'link' => 'http://www.ibilling.io/documentation/'
+    ),
+    array(
+    'name' => 'Purchase',
+    'link' => 'https://codecanyon.net/item/ibilling-crm-accounting-and-billing-software/11021678',
+    'target' => '_blank'
+    )
+    ));
+</code></pre>
+
+                    <div class="code-preview">
+                        <p><img src="assets/img/hook_custom_menu.png"> </p>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+            <section>
+                <h2 id="registering_users">Registering users in another system</h2>
+
+                <p>After clinet signup, call api to create user to your another system.</p>
+
+                <div class="code-window">
+
+
+
+
+
+
+<pre class="line-numbers"><code class="language-php">Event::bind('client_registered',function($data){
+
+    $name = $data['account'];
+    $email = $data['email'];
+
+    // Your logic to create account through api
+
+
+    });
+</code></pre>
+
+
+
+                </div>
+
+
+            </section>
+
+            <!--<section>-->
+                <!--<h2 id="modify_features">Modifying Default Features</h2>-->
+                <!--<p>Here is the some usage example</p>-->
+
+
+            <!--</section>-->
+
+
+
+
+            <!--<section>-->
+                <!--<h2 id="hookpoints">Hook Points</h2>-->
+                <!--<p>Here is the some usage example</p>-->
+
+
+            <!--</section>-->
+
+
+
+
+
+
+
+
+
 
             <section>
                 <h2 id="support">Getting Support</h2>
