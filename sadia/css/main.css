@@ -1,0 +1,46 @@
+html {
+  height: 100%;
+  border-left: 1.7em solid #171814;
+}
+
+body {
+  background-color: #272822;
+  color: #10FA00;
+  margin-left: -1.7em;
+}
+
+.code {
+  counter-reset: listing;
+  margin-top: 0.5em;
+}
+
+code {
+  counter-increment: listing;
+  display: block;
+}
+
+.code code:before {
+  content: counter(listing);
+  color: #6A6D73;
+  display: inline-block;
+  min-width: 1.7em;
+  margin-right: 0.7em;
+  padding-left: 0.2em;
+}
+
+.code .comment {
+  color: #716B59;
+}
+
+.code .name {
+  color: #E6DB74;
+}
+
+.code a {
+  color: #66D9D3;
+  text-decoration: none;
+}
+
+.code a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>iBilling Media Library Documentation</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="bs-docs-header" id="content" tabindex="-1">
+    <div class="container">
+        <h1>Media Library</h1>
+        <p>Keep your Business Documents in the Cloud</p>
+    </div>
+</div>
+<div class="container bs-docs-container">
+    <div class="row">
+
+
+        <!-- Left Column Start-->
+
+
+        <div class="col-md-3" role="complementary">
+
+
+
+            <nav class="bs-docs-sidebar hidden-print affix-top">
+
+
+
+
+
+                <!-- Left Menu Started -->
+
+
+                <ul class="nav bs-docs-sidenav">
+                    <li><a href="#get-started">Get started with Media Library Plugin</a></li>
+                    <li>
+                        <a href="#installing">Installing Media Library Plugin</a>
+                        <ul class="nav">
+                            <li><a href="#drag_n_drop">Drag &amp; Drop Installation</a></li>
+                            <li><a href="#manual_installation">Manual Installation</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#access">Accessing Media</a>
+
+                    </li>
+
+                    <li>
+                        <a href="#media_settings">Media Settings</a>
+
+                    </li>
+
+
+                    <li><a href="#troubleshooting">Common Troubleshooting Tips</a></li>
+
+                    <li><a href="#disabling">Disabling Plugin</a></li>
+
+                    <li><a href="#uninstalling">Uninstalling Plugin</a></li>
+                    <li><a href="#deleting_plugin">Deleting Plugin</a></li>
+
+                    <li><a href="#support">Getting Support</a></li>
+
+                </ul>
+
+
+
+
+
+                <!-- Left Menu End -->
+
+
+                <a href="#top" class="back-to-top"> Back to top </a>
+            </nav>
+
+
+
+
+        </div>
+
+        <!--Left Column End-->
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-9" role="main">
+
+
+
+            <div class="bs-docs-section">
+                <h2 id="get-started"><a href="#get-started">Get started with Media Library Plugin</a></h2>
+
+                <p class="lead">This is a Plugin for iBilling. You must have already installed iBilling to use Media Library Plugin. Please use the latest version of iBilling to use this plugin. You can download latest version by visiting codecanyon, My Account -> Downloads.
+                </p>
+            </div>
+
+
+            <div class="bs-docs-section">
+                <h2 id="installing"><a href="#installing">Installing</a></h2>
+                <p>
+                    iBilling has built in option to automatically install Plugin. The system will upload zip folder and will automatically unzip on the fly in server. For this feature, your server must have options enable PHP ZipArchive. Also, write permission for plugins folder. In most server this options is enabled by default. For any reason, if this option does not work for you, you will have to go with Manual Installation.
+                </p>
+            </div>
+
+
+
+            <!--
+
+            <div class="bs-docs-section">
+                <h2 id=""></h2>
+
+            </div>
+
+
+            -->
+
+
+            <div class="bs-docs-section">
+                <h2 id="drag_n_drop"><a href="#drag_n_drop">Drag & Drop Installation</a> </h2>
+                <ul class="step-text">
+                    <li>
+                        <h5>Go to Plugins Menu</h5>
+                        <p>Login to your iBilling. Then go to Plugins menu</p>
+                        <img src="assets/img/ibilling_plugin_menu.png">
+                    </li>
+
+                    <li>
+                        <h5>Upload Downloaded zip file</h5>
+                        <p>Uploaded your downloaded zip file using drag and drop or click to upload. The system will automatically upload and extract the plugin.</p>
+                    </li>
+
+                    <li>
+                        <h5>Install</h5>
+                        <p>You will find newly uploaded plugin in the plugin list. Simply click the Install button. The plugin will be installed and activated.</p>
+                        <p><img class="img-responsive" src="assets/img/button_plugin_install.png"> </p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bs-docs-section">
+                <h2 id="manual_installation"><a href="#manual_installation">Manual Installation</a> </h2>
+                <ul class="step-text">
+                    <li>
+                        <h5>Go to Plugins</h5>
+                        <p>Login to your iBilling. Then go to Plugins menu.</p>
+                    </li>
+
+                    <li>
+                        <h5>Extract Plugin Zip file</h5>
+                        <p>Extract the downloaded file using any unzipping software. You will find a directory named "ide".</p>
+                    </li>
+
+                    <li>
+                        <h5>Upload Plugin files in the plugin directory</h5>
+                        <p>Upload the "media" folder in <code>application/plugins/</code> directory using ftp or any other programme.</p>
+                    </li>
+
+                    <li>
+                        <h5>Install</h5>
+                        <p>You will find newly uploaded plugin in the plugin list. Simply click the Install button. The plugin will be installed and activated.</p>
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+
+
+            <div class="bs-docs-section">
+                <h2 id="access">Accessing IDE</h2>
+                <p>After Installing this Plugin, you will find a New Navigation Menu Named "Media". You will be able to access this Plugin by clicking this link.</p>
+                <p><img class="img-responsive" src="assets/img/plugin/media_browser.png"></p>
+            </div>
+
+
+
+
+
+            <div class="bs-docs-section">
+                <h2 id="media_settings">Media Settings</h2>
+                <p>To Access Media Settings Go to Settings -> Media Settings</p>
+                <p><img class="img-responsive" src="assets/img/plugin/media_settings.png"></p>
+                <p>
+                    <strong>Enabling Database Storage: </strong> If you enable this, you will be able to store files in the database instead of disk storage folder.
+                </p>
+                <p>
+                    <strong>Changing Theme: </strong> Media has two available themes, Default theme & Windows 10. Default theme will look like Mac File Storage & Windows 10 will look like - Windows 10 File Explorer. <br>
+                    Here is how it will look like in default theme-
+
+                </p>
+                <p><img class="img-responsive" src="assets/img/plugin/media_default_theme.png"></p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="bs-docs-section">
+                <h2 id="troubleshooting">Common Troubleshooting Tips</h2>
+                <p>Please make sure the plugins directory exist in the application/plugins/ folder & You are using latest version of iBilling. Also check all the files has been uploaded in the directory.</p>
+            </div>
+
+            <div class="bs-docs-section">
+                <h2 id="disabling">Disabling Plugin</h2>
+                <p>To disable this Plugin- Go to Settings -> Plugins. You will find this plugin listed on this page. Just click Deactivate to disable this plugin</p>
+                <p><img class="img-responsive" src="assets/img/button_plugin_deactivate.png"> </p>
+            </div>
+
+            <div class="bs-docs-section">
+                <h2 id="uninstalling">Uninstalling Plugin</h2>
+                <p>After deactivating the plugin, you will be able to uninstall the plugin. To do this, simply click Uninstall button on Plugins page. Please note that, all configuration will be removed when uninstalled.</p>
+                <p><img class="img-responsive" src="assets/img/button_plugin_uninstall.png"> </p>
+            </div>
+
+            <div class="bs-docs-section">
+                <h2 id="deleting_plugin">Deleting Plugin</h2>
+                <p>After Uninstalling the plugin, you will be able to delete the plugin. This will completely delete this plugin directory along with all contents.</p>
+                <p><img class="img-responsive" src="assets/img/button_plugin_delete.png"> </p>
+            </div>
+
+            <div class="bs-docs-section">
+                <h2 id="support"></h2>
+                <p>For any support, contact me using my profile page - <a href="https://codecanyon.net/user/sadiasharmin" target="_blank">https://codecanyon.net/user/sadiasharmin</a> </p>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Footer Start-->
+
+<footer class="bs-docs-footer">
+    <div class="container">
+        <ul class="bs-docs-footer-links">
+            <li><a href="https://codecanyon.net/item/ibilling-crm-accounting-and-billing-software/11021678?license=regular&open_purchase_for_item_id=11021678&purchasable=source&ref=SadiaSharmin">View iBilling on CodeCanyon</a>
+            </li>
+        </ul>
+        <p>Copyright &copy; 2016 <a href="http://www.cloudonex.com/" target="_blank">CloudOnex</a></p>
+
+    </div>
+</footer>
+<!--Footer End-->
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/docs.js"></script>
+
+
+</body>
+
+</html>
